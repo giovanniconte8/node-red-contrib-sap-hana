@@ -5,6 +5,8 @@ node-red-contrib-sap-hana
 Change Log
 -------
 
+v1.2.4 - Readme updates
+
 v1.2.3 - Split the node in separate files & readme updates
 
 v1.2.2 - Bugfix : removed node type that is not used
@@ -13,15 +15,7 @@ v1.2.1
 * Feature added : New node type `table_insert` for inserts receiving an array of objects (from http-in node)
 * BIG CHANGE/INCOMPATIBILITY : Node type names have changed/simplified and may be found in different group `sap hana` now.
 	   
-v1.1.1 - Feature added : New node type `saphanatablemonitor` with configurable interval and query that may be used to monitor when #no-of-records in a table is changing
-
-v1.0.5 & v1.0.6- Readme update : User has to be SCHEMA OWNER or to have HDI ADMIN user priviledges (not the users seen in XSA Environment *_RT, *_DT)
-
-v1.0.4 - Readme fix
-
-v1.0.2 - Feature added : Insert in msg.payload an Array of sql script commands (Example flows updated also)
-
-v1.0.1 - INSERT, UPDATE, DELETE and other SQL script sql commands work
+v1.1.1 - Feature added : New node type `table_monitor` with configurable interval and query that may be used to monitor when #no-of-records in a table is changing
 
 
 Install
@@ -34,7 +28,7 @@ npm install node-red-contrib-sap-hana
 ```
 
 
-Do not forget to edit `/etc/hosts` for default hxehost replacing X.Y or whole IP address if you're using hxehost as hostname
+Do not forget to edit `/etc/hosts` for default hxehost replacing X.Y or whole IP address if you're using `hxehost` as hostname
 ```
 192.168.X.Y hxehost
 ```
@@ -42,7 +36,7 @@ Do not forget to edit `/etc/hosts` for default hxehost replacing X.Y or whole IP
 Usage
 -----
 
-This package contains one node to run a sql command, call a procedure or a select statement for SAP HANA database using the office @sap/hana-client Node.JS driver.
+This package contains multiple nodes used to run queries or CRUD operations for SAP HANA database using the official SAP `@sap/hana-client` Node.JS driver.
 
 Example flows here :
 * [sap_hana_config.json](https://github.com/radu103/node-red-contrib-sap-hana/blob/master/examples/sap_hana_config.json)
@@ -50,6 +44,9 @@ Example flows here :
 * [table_monitor.json](https://github.com/radu103/node-red-contrib-sap-hana/blob/master/examples/table_monitor.json)
 * [table_insert.json](https://github.com/radu103/node-red-contrib-sap-hana/blob/master/examples/table_insert.json)
 
+
+Documentation
+-----
 
 ## 1. `sap_hana_config` node
 

@@ -14,7 +14,9 @@
     "node-red",
     "sap",
     "sap-hana",
-    "hana"
+    "hana",
+	"rest",
+	"api"
   ],
   "node-red": {
     "nodes": {
